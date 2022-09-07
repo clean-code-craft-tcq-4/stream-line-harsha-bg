@@ -9,7 +9,7 @@ namespace Sender.TestProject
         [Test]
         public void GenerateTemperatureValues()
         {
-            List<int> values = BatteryParameterMethods.GenerateTemperatureValues(0,45);
+            List<int> values = BatteryParameterMethods.GenerateTemperatureValues(1,45);
             Assert.IsTrue(values.All(x => x < 45 && x > 0));
         }
 
