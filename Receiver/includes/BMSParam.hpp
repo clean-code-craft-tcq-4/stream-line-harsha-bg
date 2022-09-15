@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 
-#define EARLY_WARNING_PERCENTAGE 5 
-
 using namespace std;
 enum BMSParamType
 {
@@ -29,8 +27,6 @@ class Temperature : public BMSParam
     float getValue() override;
     BMSParamType getType() override;
     private:
-    const float MIN_TEMP {0};
-    const float MAX_TEMP {45};
     float m_temp {0.0};
 };
 
@@ -41,8 +37,6 @@ class SOC : public BMSParam
     float getValue() override;
     BMSParamType getType() override;
     private:
-    const float MIN_SOC {20};
-    const float MAX_SOC {80};
     float m_soc {0.0};
 };
 
@@ -53,8 +47,6 @@ class ChargeRate : public BMSParam
     float getValue() override;
     BMSParamType getType() override;
     private:
-    const float MIN_CHARGE_RATE {0};
-    const float MAX_CHARGE_RATE {.8};
     float m_cr{0.0};
 };
 
